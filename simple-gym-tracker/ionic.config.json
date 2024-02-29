@@ -1,0 +1,7 @@
+{
+  "name": "simple-gym-tracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
