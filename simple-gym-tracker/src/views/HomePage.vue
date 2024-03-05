@@ -9,7 +9,7 @@
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
+          <ion-title size="large">Blank asfdasd</ion-title>
         </ion-toolbar>
       </ion-header>
 
@@ -21,7 +21,7 @@
   </ion-page>
 </template>
 
-<script setup lang="ts">
+<script>
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 </script>
 
