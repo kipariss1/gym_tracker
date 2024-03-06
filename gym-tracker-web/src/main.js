@@ -30,8 +30,3 @@ const app = createApp(App)
 router.isReady().then(() => {
   app.mount('#app');
 });
-
-// treat all tags starting with 'ion-' as custom elements
-app.config.compilerOptions.isCustomElement = (tag) => {
-  return tag.startsWith('ion-') // (return true)
-}

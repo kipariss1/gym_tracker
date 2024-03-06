@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'simple-gym-tracker',
+  appName: 'gym-tracker-web',
   webDir: 'dist',
   server: {
     androidScheme: 'https'

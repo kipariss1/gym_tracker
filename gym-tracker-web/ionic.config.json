@@ -1,5 +1,5 @@
 {
-  "name": "simple-gym-tracker",
+  "name": "gym-tracker-web",
   "integrations": {
     "capacitor": {}
   },
