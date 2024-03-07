@@ -1,23 +1,16 @@
 <template>
-    <ion-page>
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>All memories</ion-title>
-            </ion-toolbar>
-        </ion-header>
-        <ion-content>
-            <h2>These are my memories!</h2>
-            <ion-list>
-                <ion-item>Ivan</ion-item>
-                <ion-item>Alexandr</ion-item>
-                <ion-item>Gorshok</ion-item>
-            </ion-list>
-        </ion-content>
-    </ion-page>
+    <base-layout>
+        <ion-list>
+            <ion-item>Trip with LSD</ion-item>
+            <ion-item>Trip to Chelyabinsk</ion-item>
+            <ion-item>Trip to "Korol i Shut" concert</ion-item>
+        </ion-list>
+    </base-layout>
 </template>
 
 <script>
     import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem } from '@ionic/vue';
+import BaseLayout from '../components/base/BaseLayout.vue';
 
     export default {
         components: {
@@ -28,6 +21,10 @@
             IonContent: IonContent,
             IonList: IonList,
             IonItem: IonItem,
+            BaseLayout: BaseLayout,
         }
     }
 </script>
+
+<style scoped>
+</style>
