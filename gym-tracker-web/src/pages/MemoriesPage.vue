@@ -1,27 +1,47 @@
 <template>
-    <base-layout>
+    <base-layout pageTitle="The details">
         <ion-list>
-            <ion-item>Trip with LSD</ion-item>
-            <ion-item>Trip to Chelyabinsk</ion-item>
-            <ion-item>Trip to "Korol i Shut" concert</ion-item>
+            <ion-list v-for="memory in memories" :key="memory.id"
+            router-link="/memories/{memory.id}"
+            >
+                {{ memory.title }}
+            </ion-list>
         </ion-list>
     </base-layout>
 </template>
 
 <script>
-    import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem } from '@ionic/vue';
-import BaseLayout from '../components/base/BaseLayout.vue';
+    import { IonContent, IonList, IonItem } from '@ionic/vue';
+    import BaseLayout from '../components/base/BaseLayout.vue';
 
     export default {
         components: {
-            IonPage: IonPage,
-            IonHeader: IonHeader,
-            IonToolbar: IonToolbar,
-            IonTitle: IonTitle,
             IonContent: IonContent,
             IonList: IonList,
             IonItem: IonItem,
             BaseLayout: BaseLayout,
+        },
+        data() {
+            return {
+                memories: [
+                    {
+                        id: 'm1',
+                        title: 'Trip with LSD',
+                        description: 'I used some LSD eeeeeeeeeeeeee',
+                    },
+                    {
+                        id: 'm2',
+                        title: 'Trip to Chelyabinsk',
+                        description: 'I used some LSD eeeeeeeeeeeeee in Chelyabinsk',
+
+                    },
+                    {
+                        id: 'm3',
+                        title: 'Trip to "Korol i Shut" concert',
+                        description: 'I used some LSD eeeeeeeeeeeeee at "Korol i shut" concert',
+                    },
+                ]
+            };
         }
     }
 </script>

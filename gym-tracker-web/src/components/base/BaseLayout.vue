@@ -2,11 +2,11 @@
     <ion-page>
         <ion-header>
             <ion-toolbar>
-                <ion-title>{{ pageName }}</ion-title>
+                <ion-back-button :default-href="pageDefaultBackLink"></ion-back-button>
+                <ion-title>{{ pageTitle }}</ion-title>
             </ion-toolbar>
         </ion-header>
         <ion-content>
-            <h2>These are my memories!</h2>
             <ion-list>
                 <slot />
             </ion-list>
@@ -15,11 +15,15 @@
 </template>
 
 <script>
-    import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+    import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonBackButton } from '@ionic/vue';
 
     export default {
         props: {
-            pageName: {
+            pageTitle: {
+                type: String,
+                required: true,
+            },
+            pageDefaultBackLink: {
                 type: String,
                 required: true,
             }
@@ -30,14 +34,11 @@
             IonToolbar: IonToolbar,
             IonTitle: IonTitle,
             IonContent: IonContent,
+            IonBackButton: IonBackButton,
         }
     }
 </script>
 
 <style scoped>
-
-    h2 {
-        margin: 10px;
-    }
 
 </style>

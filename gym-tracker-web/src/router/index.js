@@ -4,6 +4,7 @@ import MemoriesPage from '../pages/MemoriesPage.vue';
 const routes = [
   {
     path: '/',
+    name: "Home",
     redirect: '/memories'
   },
   {
@@ -11,6 +12,11 @@ const routes = [
     name: 'MemoriesPage',
     component: MemoriesPage,
   },
+  {
+    path: '/memories/:id',
+    name: 'MemoryDetails',
+    component: () => import('../pages/MemoryDetails.vue'),
+  }
 ]
 
 const router = createRouter({
